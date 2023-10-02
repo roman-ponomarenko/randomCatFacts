@@ -2,26 +2,17 @@
 const { Octokit } = require('@octokit/rest');
 
 //Insert your GitHub tokens here in next format ['token1', 'token2', 'token3']
-const gitTokens = ['token1', 
-                   'token2',
-                   'token3',
-                   'token4',
-                   'token5']
+const gitTokens = ['',
+]
 
 //Insert your GitHub names here in next format ['name1', 'name2', 'name3']
-const gitNames = ['name1',
-                  'name2',
-                  'name3',
-                  'name4',
-                  'name5']
-
-
+const gitNames = ['',
+                  ]
 
 //Function to generate unique name for the file
 function generateUniqueName() {
-    return `fact_${Math.floor(Math.random() * 150000000)}.txt`;
+    return `cat_fact_${Date.now()}.txt`;
 }
-
 
 //Function to push random cat fact to the GitHub repo
 async function pushRandomCatName(repoOwner, token) {
